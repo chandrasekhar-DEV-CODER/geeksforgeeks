@@ -15,12 +15,10 @@ class Solution {
         int ma=0;
         for(int i=arr.size()-1;i>=0;i--)
         {
-            if(arr[i]>=ma)
-            {
+            if(arr[i]>=ma){
                 a.push_back(arr[i]);
+                ma=arr[i];
             }
-            ma=max(ma,arr[i]);
-            
         }
         reverse(a.begin(),a.end());
         return a;
