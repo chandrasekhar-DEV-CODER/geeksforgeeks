@@ -33,21 +33,18 @@ public:
 
 void MyStack ::push(int x) {
     // Your Code
-    if (top >= 99) {
-            cout << "Stack Overflow" << endl;
-        } else {
-            arr[++top] = x;
-        }
+    if(top<999){
+        arr[++top]=x;
+    }
 }
 
 // Function to remove an item from top of the stack.
 int MyStack ::pop() {
     // Your Code
-    if (top < 0) {
-            return -1; // Stack is empty
-        } else {
-            return arr[top--];
-        }
+    if(top==-1){
+        return -1;
+    }
+    return arr[top--];
 }
 
 
